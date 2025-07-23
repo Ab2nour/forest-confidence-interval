@@ -150,8 +150,6 @@ def _core_computation(
     # user has specified a memory limit. Use in-memory chunked computation
     else:
         pass
-    if not memory_limit: # fixme: I don't know if I must keep this if statement or not
-        raise ValueError("If memory_constrained=True, must provide", "memory_limit.")
 
     # Assumes double precision float
     chunk_size = int((memory_limit * 1e6) / (8.0 * X_train_shape[0]))
