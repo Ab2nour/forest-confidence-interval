@@ -106,7 +106,7 @@ def gfit(X, sigma, p=5, nbin=200, unif_fraction=0.1):
     return xvals, g_eta
 
 
-def gbayes(x0, g_est, sigma):
+def gbayes(x0: np.ndarray, g_est: tuple[np.ndarray, np.ndarray], sigma: float):
     """
     Estimate Bayes posterior with Gaussian noise [Efron2014]_.
 
